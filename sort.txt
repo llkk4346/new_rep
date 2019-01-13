@@ -1,0 +1,31 @@
+// ConsoleApplication35.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+#include "pch.h"
+#include <iostream>
+#include <algorithm>
+#include  <iterator>
+using namespace std;
+
+bool comparefun(int x, int y)
+{
+	return x > y; //по убыванию сортирует
+}
+
+int main()
+{
+	const int N = 8;
+	int a[N] =
+	{ 9866,1234,5432,3346,9831,7842,8863,9852 };
+	cout << "before sorting\n";
+	copy(a, a + N, ostream_iterator<int>(cout , " "));
+	cout << "\n";
+	sort(a, a + N, comparefun);
+	cout << "after sorting\n";
+	copy(a, a + N, ostream_iterator<int>(cout, " "));
+	cout << endl;
+
+
+
+    std::cout << "Hello World!\n"; 
+}
